@@ -4,6 +4,10 @@ import { Product } from "./Product";
 import "./Shop.css";
 
 export const Shop = () => {
+  fetch("https://dummyjson.com/products")
+    .then((res) => res.json())
+    .then((data) => console.log(data.products));
+
   return (
     <div className="shop">
       <div className="shopTitle">
